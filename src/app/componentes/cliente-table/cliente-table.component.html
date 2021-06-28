@@ -1,1 +1,33 @@
-<p>cliente-table works!</p>
+<div class="container mt-2 bg-light">
+    <div class="d-grid gap-2 d-md-block">
+      <button type="button" class="btn btn-primary mb-2 mt-2" title="Nuevo Usuario" (click)="irAlForm()" >
+        <i class="fas fa-user-plus"></i>
+      </button>
+      <button type="button" class="btn btn-danger mb-2 mt-2" title="Exportar a Pdf" (click)="imprimirLista()" >
+        <i class="fas fa-file-pdf"></i>
+      </button>
+    </div>
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-dark table-striped">
+      <thead>
+        <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">CI</th>
+                  <th scope="col">Telefono</th>
+                  <th scope="col">Ubicacion</th> 
+                  <th scope="col">Ver</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of listaClientes">
+          <th scope="row">{{cliente.id}}</th>
+          <td scope="row">{{cliente.nombre}}</td>
+          <td scope="row">{{cliente.ci_cliente}}</td>
+          <td scope="row">{{cliente.telefono}}</td>
+          <td scope="row">{{cliente.ubicacion}}</td>
+          <td><button type="submit" class="btn btn-success btn-lg" (click)="clienteCard(cliente.id)"><i class="fas fa-user"></i></button></td> 
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
-import { BasededatosService } from '../../services/basededatos.service'
+import { BasededatosService } from '../../services/basededatos.service';
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 import {ITable, PdfMakeWrapper, Table} from 'pdfmake-wrapper';
 import { IEnfermera } from '../../interfaces/IEnfermera';

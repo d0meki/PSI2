@@ -1,1 +1,36 @@
-<p>enfermera-edit works!</p>
+<div class="container">
+    <div class="row">
+      <div class="col-lg-4 offset-lg-4 mt-4">
+        <div class="card mt-4">
+          <div class="card-header bg-dark text-white d-flex justify-content-between alingn-items-center">
+            EDITAR ENFERMERA
+          </div>
+          <form [formGroup]="editForm" (ngSubmit)="editarEnfermera()" *ngFor="let datos of nurse"> <!--  -->
+            <div class="card-body">
+              <div class="form-group">
+                <input type="text" class="form-control is-valid" formControlName="nombre" name="nombre" [(ngModel)]="datos.nombre"placeholder="Nombre Completo" value="" required> 
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control is-valid" formControlName="ci_enfermera" name="ci_enfermera" [(ngModel)]="datos.ci_enfermera" placeholder="CI"  value="" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control is-valid" formControlName="telefono" name="telefono" [(ngModel)]="datos.telefono" placeholder="telefono"  value="" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control is-valid" formControlName="direccion" name="direccion" [(ngModel)]="datos.direccion" placeholder="Direccion" value="" required>
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control is-valid" formControlName="sueldo" name="sueldo" [(ngModel)]="datos.sueldo" placeholder="Sueldo" value="" required>   
+              </div>
+              <div class="col-12">
+                <button (click)="cancelar()" class="btn btn-info btn-block">Cancelar</button>
+                <button type="submit" [disabled] = "editForm.invalid" class="btn btn-info btn-block float-end"  >GUARDAR CAMBIOS</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>   
+      
+    

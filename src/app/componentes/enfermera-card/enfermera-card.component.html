@@ -1,1 +1,25 @@
-<p>enfermera-card works!</p>
+<div class="container mt-4 ">
+    <div class="row">   
+        <div class="col-lg-4 offset-lg-4 mt-4">
+            <div class="card">
+                <div class="card-header bg-dark text-white d-flex justify-content-between alingn-items-center">
+                    <h3>Enfermera</h3>
+                    <button type="submit" class="btn btn-info btn-lg" (click)="onEdidt()"><i class="far fa-edit"></i></button>
+                    <button type="submit" class="btn btn-danger btn-lg" (click)="onDelete()"><i class="far fa-trash-alt"></i></button>   
+                    <button class="btn btn-success btn-lg" disabled><i class="fas fa-user-nurse"></i></button>
+                </div>
+                <div class="card-body" *ngFor="let datos of nurse">
+                    <p> <strong>ID:</strong> {{datos.id}} <br>
+                        <strong>Nombre:</strong> {{datos.nombre}} <br>
+                        <strong>CI:</strong> {{datos.ci_enfermera}} <br>
+                        <strong>Telefono:</strong> {{datos.telefono}} <br>
+                        <strong>Direccion:</strong> {{datos.direccion}} <br>
+                        <strong>Sueldo:</strong> {{datos.sueldo}}</p>
+                </div>
+                <a (click)="volver()" class="btn btn-info btn-block">
+                    Atras
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

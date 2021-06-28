@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { DataTablesModule } from "angular-datatables";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //////////COMPONENTES
 import { AppComponent } from './app.component';
 import { MapComponent } from './componentes/map/map.component';
@@ -36,7 +39,11 @@ import { ClienteEditComponent } from './componentes/cliente-edit/cliente-edit.co
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    DataTablesModule
+    DataTablesModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Loader } from "@googlemaps/js-api-loader"
 @Component({
   selector: 'app-map',
@@ -7,7 +8,7 @@ import { Loader } from "@googlemaps/js-api-loader"
 })
 export class MapComponent implements OnInit {
   
-  constructor() { 
+  constructor(private ruta: Router) { 
     
   }
   
@@ -40,7 +41,9 @@ export class MapComponent implements OnInit {
   
     
   }
-  
+  volver(){
+    this.ruta.navigate(['clientes/table'])
+  }
   
   
 

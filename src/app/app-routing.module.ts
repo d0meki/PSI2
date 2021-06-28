@@ -21,15 +21,7 @@ const routes: Routes = [
   {path: 'enfermeras/edit/:id', component: EnfermeraEditComponent},
   {path: 'enfermeras/new', component: EnfermeraFormComponent},
   {path: 'enfermeras/table', component: EnfermeraTableComponent},
-  {path: 'map', component: MapComponent},
- 
- 
- 
- 
- 
- 
- 
- 
+  {path: 'map/:id', component: MapComponent},
 ];
 
 @NgModule({
