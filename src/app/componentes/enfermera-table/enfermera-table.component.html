@@ -1,0 +1,35 @@
+<div class="container mt-2 bg-light">
+    <div class="d-grid gap-2 d-md-block">
+      <button type="button" class="btn btn-primary mb-2 mt-2" title="Nuevo Usuario" (click)="irAlForm()" ><!--  -->
+        <i class="fas fa-user-plus"></i>
+      </button>
+      <button type="button" class="btn btn-danger mb-2 mt-2" title="Exportar a Pdf" (click)="imprimirLista()"><!--   -->
+        <i class="fas fa-file-pdf"></i>
+      </button>
+    </div>
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-dark table-striped">
+      <thead>
+        <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">CI</th>
+                  <th scope="col">Telefono</th>
+                  <th scope="col">Direccion</th>
+                  <th scope="col">Sueldo</th>
+                  <th scope="col">Ver</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let enfermera of listaEnfermeras">
+          <th scope="row">{{enfermera.id}}</th>
+          <td scope="row">{{enfermera.nombre}}</td>
+          <td scope="row">{{enfermera.ci_enfermera}}</td>
+          <td scope="row">{{enfermera.telefono}}</td>
+          <td scope="row">{{enfermera.direccion}}</td>
+          <td scope="row">{{enfermera.sueldo}}</td>
+          <td><button type="submit" class="btn btn-success btn-lg" ><i class="fas fa-user-nurse" (click)="mostrarCard(enfermera.id)"></i></button></td><!--  -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
