@@ -19,6 +19,7 @@ import { ClienteCardComponent } from './componentes/cliente-card/cliente-card.co
 import { ClienteFormComponent } from './componentes/cliente-form/cliente-form.component';
 import { ClienteTableComponent } from './componentes/cliente-table/cliente-table.component';
 import { ClienteEditComponent } from './componentes/cliente-edit/cliente-edit.component';
+import { ReservaTableComponent } from './componentes/reserva-table/reserva-table.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ClienteEditComponent } from './componentes/cliente-edit/cliente-edit.co
     ClienteCardComponent,
     ClienteFormComponent,
     ClienteTableComponent,
-    ClienteEditComponent
+    ClienteEditComponent,
+    ReservaTableComponent
   ],
   imports: [
     BrowserModule,

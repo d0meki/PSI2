@@ -52,5 +52,8 @@ export class BasededatosService {
   updateCliente(id: string, actualizarCliente: ICliente){
     return this.http.put<ICliente>(`${this.URI}/cliente/${id}`,actualizarCliente);
   }
-
+  //////////////////////CONECTANDO CON TABLA RESERVA
+  getReserva(){
+    return this.http.get(`${this.URI}/reserva`);
+  }
 }

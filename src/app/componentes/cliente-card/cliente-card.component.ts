@@ -44,6 +44,7 @@ export class ClienteCardComponent implements OnInit {
   volver(){
     this.router.navigate(['clientes/table']);
   }
+  
   irAlMapa(){
     this.router.navigate(['map/',this.id]);
   }

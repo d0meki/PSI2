@@ -1,6 +1,6 @@
-<div class="container mt-4 ">
+<div class="container">
     <div class="row">   
-        <div class="col-lg-6 offset-lg-4 mt-4">
+        <div class="col-lg-5 offset-lg-4 mt-2">
             <div class="card">
                 <div class="card-header bg-dark text-white d-flex justify-content-between alingn-items-center">
                     <h3>Google Maps</h3>
@@ -8,9 +8,10 @@
                 <div class="card-body">
                     <div class="full" id="map"></div>
                 </div>
-                <a (click)="volver()" class="btn btn-info btn-block">
-                    Atras
-                </a>
+                <div>
+                    <button (click)="volver()" class="btn btn-info btn-block btn-lg">Atras</button>
+                    <button (click)="inicializarMap()" class="btn btn-info btn-block btn-lg float-end">Cargar Mapa</button>
+                </div>
             </div>
         </div>
     </div>

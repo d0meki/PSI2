@@ -1,4 +1,7 @@
 .full{
-    width: 510px;
+    width: 420px;
     height: 350px;
+}
+.btn{
+    margin: 10px;
 }
