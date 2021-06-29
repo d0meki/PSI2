@@ -6,7 +6,7 @@ import {ITable, PdfMakeWrapper, Table} from 'pdfmake-wrapper';
 import { IEnfermera } from '../../interfaces/IEnfermera';
 import { Router } from '@angular/router';
 PdfMakeWrapper.setFonts(pdfFonts);
-type tableRow = [any,string, string , string, string, number];
+type tableRow = [any,any,string, string , string, string, number];
 @Component({
   selector: 'app-enfermera-table',
   templateUrl: './enfermera-table.component.html',
@@ -27,11 +27,12 @@ export class EnfermeraTableComponent implements OnInit {
         url: '//cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json'
       }
     };
-    this.servicio.getEnfermeras().subscribe(
+     this.servicio.getEnfermeras().subscribe(
       res => {
+        console.log(res);
         this.listaEnfermeras = res;
         this.dtTrigger.next();
-      }, err => console.log(err)); 
+      }, err => console.log(err));
   }
   imprimirLista(){
     const pdf = new PdfMakeWrapper();
@@ -44,17 +45,17 @@ export class EnfermeraTableComponent implements OnInit {
    createTable(data: IEnfermera[]): ITable {
      //console.log(data);
     return new Table([
-      ['ID','nombre','CI','Telefono','Direccion','Sueldo'],
+      ['ID','user_id','nombre','CI','Telefono','Direccion','Sueldo'],
       ...this.extraerDatos(data)
     ]).end;
   }
    extraerDatos(data: IEnfermera[]): tableRow[] {
-    return data.map(row => [row.id,row.nombre,row.ci_enfermera,row.telefono,row.direccion,row.sueldo]);
+    return data.map(row => [row.id,row.user_id,row.nombre,row.ci_enfermera,row.telefono,row.direccion,row.sueldo]);
   }  
   ngOnDestroy(): void {
     this.dtTrigger.unsubscribe();
   }
-  mostrarCard(id: any){
+  enfermeraCard(id: any){
     this.ruta.navigate(['enfermeras/card/',id])
   }
   irAlForm(){

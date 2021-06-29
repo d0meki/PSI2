@@ -7,7 +7,7 @@ import { Subject } from 'rxjs';
 import { ICliente } from 'src/app/interfaces/ICliente';
 import { BasededatosService } from '../../services/basededatos.service';
 PdfMakeWrapper.setFonts(pdfFonts);
-type tableRow = [any,string, string , string, string, number,number];
+type tableRow = [any,any,string, string , string, string, number,number];
 @Component({
   selector: 'app-cliente-table',
   templateUrl: './cliente-table.component.html',
@@ -45,12 +45,12 @@ export class ClienteTableComponent implements OnInit {
   }
    createTable(data: ICliente[]): ITable {
     return new Table([
-      ['ID','nombre','CI','Telefono','Ubicacion','latitud','longitud'],
+      ['ID','user_id','nombre','CI','Telefono','Ubicacion','latitud','longitud'],
       ...this.extraerDatos(data)
     ]).end;
   }
    extraerDatos(data: ICliente[]): tableRow[] {
-    return data.map(row => [row.id,row.nombre,row.ci_cliente,row.telefono,row.ubicacion,row.latitud,row.longitud]);
+    return data.map(row => [row.id,row.user_id,row.nombre,row.ci_cliente,row.telefono,row.ubicacion,row.latitud,row.longitud]);
   }  
   ngOnDestroy(): void {
     this.dtTrigger.unsubscribe();

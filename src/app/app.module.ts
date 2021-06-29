@@ -23,6 +23,7 @@ import { ReservaTableComponent } from './componentes/reserva-table/reserva-table
 import { ReservaComponent } from './componentes/reserva/reserva.component';
 import { ReservaServicioComponent } from './componentes/reserva-servicio/reserva-servicio.component';
 import { ReservaEnfermeraComponent } from './componentes/reserva-enfermera/reserva-enfermera.component';
+import { LoginComponent } from './componentes/login/login.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ReservaEnfermeraComponent } from './componentes/reserva-enfermera/reser
     ReservaTableComponent,
     ReservaComponent,
     ReservaServicioComponent,
-    ReservaEnfermeraComponent
+    ReservaEnfermeraComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

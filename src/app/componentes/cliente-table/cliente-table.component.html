@@ -11,6 +11,7 @@
       <thead>
         <tr>
                   <th scope="col">ID</th>
+                  <th scope="col">User ID</th>
                   <th scope="col">Nombre</th>
                   <th scope="col">CI</th>
                   <th scope="col">Telefono</th>
@@ -21,6 +22,7 @@
       <tbody>
         <tr *ngFor="let cliente of listaClientes">
           <th scope="row">{{cliente.id}}</th>
+          <th scope="row">{{cliente.user_id}}</th>
           <td scope="row">{{cliente.nombre}}</td>
           <td scope="row">{{cliente.ci_cliente}}</td>
           <td scope="row">{{cliente.telefono}}</td>

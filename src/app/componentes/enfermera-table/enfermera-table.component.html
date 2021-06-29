@@ -11,6 +11,7 @@
       <thead>
         <tr>
                   <th scope="col">ID</th>
+                  <th scope="col">User ID</th>
                   <th scope="col">Nombre</th>
                   <th scope="col">CI</th>
                   <th scope="col">Telefono</th>
@@ -22,12 +23,13 @@
       <tbody>
         <tr *ngFor="let enfermera of listaEnfermeras">
           <th scope="row">{{enfermera.id}}</th>
+          <th scope="row">{{enfermera.user_id}}</th>
           <td scope="row">{{enfermera.nombre}}</td>
           <td scope="row">{{enfermera.ci_enfermera}}</td>
           <td scope="row">{{enfermera.telefono}}</td>
           <td scope="row">{{enfermera.direccion}}</td>
           <td scope="row">{{enfermera.sueldo}}</td>
-          <td><button type="submit" class="btn btn-success btn-lg" ><i class="fas fa-user-nurse" (click)="mostrarCard(enfermera.id)"></i></button></td><!--  -->
+          <td><button type="submit" class="btn btn-success btn-lg" (click)="enfermeraCard(enfermera.id)"><i class="fas fa-user"></i></button></td> 
         </tr>
       </tbody>
     </table>

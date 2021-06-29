@@ -8,6 +8,9 @@
           <form [formGroup]="editForm" (ngSubmit)="editarEnfermera()" *ngFor="let datos of nurse"> <!--  -->
             <div class="card-body">
               <div class="form-group">
+                <input type="text" class="form-control is-valid" formControlName="user_id" name="user_id" [(ngModel)]="datos.user_id"placeholder="ID usuario" value="" required> 
+              </div>
+              <div class="form-group">
                 <input type="text" class="form-control is-valid" formControlName="nombre" name="nombre" [(ngModel)]="datos.nombre"placeholder="Nombre Completo" value="" required> 
               </div>
               <div class="form-group">

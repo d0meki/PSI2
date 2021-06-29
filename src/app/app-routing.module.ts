@@ -9,6 +9,7 @@ import { EnfermeraEditComponent } from './componentes/enfermera-edit/enfermera-e
 import { EnfermeraFormComponent } from './componentes/enfermera-form/enfermera-form.component';
 import { EnfermeraTableComponent } from './componentes/enfermera-table/enfermera-table.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
+import { LoginComponent } from './componentes/login/login.component';
 import { MapComponent } from './componentes/map/map.component';
 import { ReservaEnfermeraComponent } from './componentes/reserva-enfermera/reserva-enfermera.component';
 import { ReservaServicioComponent } from './componentes/reserva-servicio/reserva-servicio.component';
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path: 'reserva', component: ReservaComponent},
   {path: 'reserva/servicio', component: ReservaServicioComponent},
   {path: 'reserva/enfermera', component: ReservaEnfermeraComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'map/:id', component: MapComponent},
 ];
 

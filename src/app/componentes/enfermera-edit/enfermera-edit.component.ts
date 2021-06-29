@@ -19,6 +19,7 @@ export class EnfermeraEditComponent implements OnInit {
               private toastr: ToastrService,
               private fb: FormBuilder) { 
                this.editForm = this.fb.group({
+                  user_id:[ , Validators.required],
                   nombre: ['', Validators.required],
                   ci_enfermera: ['', Validators.required],
                   telefono: ['', Validators.required],

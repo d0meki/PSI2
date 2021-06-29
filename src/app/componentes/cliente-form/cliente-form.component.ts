@@ -19,6 +19,7 @@ export class ClienteFormComponent implements OnInit {
               private ruta: Router,
               private fb: FormBuilder) { 
                 this.registroForm = this.fb.group({
+                  user_id: [ , Validators.required],
                   nombre: ['', Validators.required],
                   ci_cliente: ['', Validators.required],
                   telefono: ['', Validators.required],
@@ -40,6 +41,7 @@ export class ClienteFormComponent implements OnInit {
         this.ruta.navigate(['clientes/table']);
       },
       (err: any) => console.log(err));
+      
   }
   cancelar(){
     this.ruta.navigate(['clientes/table'])

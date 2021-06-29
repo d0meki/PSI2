@@ -19,12 +19,13 @@ export class ClienteEditComponent implements OnInit {
               private toastr: ToastrService,
               private fb: FormBuilder) {
     this.editForm = this.fb.group({
+      user_id: [ , Validators.required],
       nombre: ['', Validators.required],
       ci_cliente: ['', Validators.required],
       telefono: ['', Validators.required],
       ubicacion: ['', Validators.required],
-      latitud: [0 , Validators.required],
-      longitud: [0 , Validators.required]
+      latitud: [ , Validators.required],
+      longitud: [ , Validators.required]
     })
    }
 
