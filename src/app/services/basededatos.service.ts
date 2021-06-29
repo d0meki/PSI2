@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IEnfermera } from '../interfaces/IEnfermera';
 import { ICliente } from '../interfaces/ICliente';
-
+import { IServicio } from '../interfaces/Iservicio';
 @Injectable({
   providedIn: 'root'
 })
@@ -51,6 +51,26 @@ export class BasededatosService {
   //ACTUALIZA UNA ENFERMERA
   updateCliente(id: string, actualizarCliente: ICliente){
     return this.http.put<ICliente>(`${this.URI}/cliente/${id}`,actualizarCliente);
+  }
+  //////////////////////CONECTANDO CON TABLA SERVICIO
+  getServicio(){
+    return this.http.get(`${this.URI}/servicio`);
+  }
+  //OBTIENE UN SERVICIO EN ESPESIFICO
+  getServicioId(id: string){
+    return this.http.get<IServicio>(`${this.URI}/servicio/${id}`);
+  }
+  //ELIMINA UNA SERVICIO
+  eliminarServicio(id: string){
+    return this.http.delete(`${this.URI}/servicio/${id}`);
+  }
+  //AGREGA UNA NUEVA SERVICIO
+  guardarServicio(nuevoCliente: IServicio){
+    return this.http.post(`${this.URI}/servicio`,nuevoCliente);
+  }
+  //ACTUALIZA UNA SERVICIO
+  updateServicio(id: string, actualizarCliente: IServicio){
+    return this.http.put<IServicio>(`${this.URI}/servicio/${id}`,actualizarCliente);
   }
   //////////////////////CONECTANDO CON TABLA RESERVA
   getReserva(){

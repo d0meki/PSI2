@@ -20,6 +20,9 @@ import { ClienteFormComponent } from './componentes/cliente-form/cliente-form.co
 import { ClienteTableComponent } from './componentes/cliente-table/cliente-table.component';
 import { ClienteEditComponent } from './componentes/cliente-edit/cliente-edit.component';
 import { ReservaTableComponent } from './componentes/reserva-table/reserva-table.component';
+import { ReservaComponent } from './componentes/reserva/reserva.component';
+import { ReservaServicioComponent } from './componentes/reserva-servicio/reserva-servicio.component';
+import { ReservaEnfermeraComponent } from './componentes/reserva-enfermera/reserva-enfermera.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { ReservaTableComponent } from './componentes/reserva-table/reserva-table
     ClienteFormComponent,
     ClienteTableComponent,
     ClienteEditComponent,
-    ReservaTableComponent
+    ReservaTableComponent,
+    ReservaComponent,
+    ReservaServicioComponent,
+    ReservaEnfermeraComponent
   ],
   imports: [
     BrowserModule,

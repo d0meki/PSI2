@@ -1,0 +1,17 @@
+<div class="container">
+    <table class="table table table-striped">
+        <thead>
+            <h4 class="text-center">LISTADO DE ENFERMERAS</h4>
+          <tr>
+            <th scope="col">NOMBRE</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ser of listaNurse">
+            <th scope="row">{{ser.nombre}}</th>
+            <td><button type="submit" class="btn btn-info">Seleccionar</button></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
