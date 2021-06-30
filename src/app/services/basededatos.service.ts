@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { IEnfermera } from '../interfaces/IEnfermera';
 import { ICliente } from '../interfaces/ICliente';
 import { IServicio } from '../interfaces/Iservicio';
+import { IUser } from '../interfaces/IUser';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,6 +12,14 @@ export class BasededatosService {
 
   constructor(private http: HttpClient) { 
   }
+  //autentificacion TABLA CUENTA
+  getCuentaParam(correo: string,contrasenia: string){
+    return this.http.get<IUser>(`${this.URI}/account/${correo}/${contrasenia}`);
+  }
+  guardarCuenta(nuevaCuenta: IUser){
+    return this.http.post(`${this.URI}/cuenta`,nuevaCuenta);
+  }
+
    //------------------------CONECNTANDO CON BASE DE DATOS ENFERMERA------------------
   //OBTIENE TODA LA LISTA DE ENFERMERAS
   getEnfermeras(){

@@ -11,13 +11,15 @@ import { EnfermeraTableComponent } from './componentes/enfermera-table/enfermera
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { MapComponent } from './componentes/map/map.component';
+import { RegisterComponent } from './componentes/register/register.component';
 import { ReservaEnfermeraComponent } from './componentes/reserva-enfermera/reserva-enfermera.component';
 import { ReservaServicioComponent } from './componentes/reserva-servicio/reserva-servicio.component';
 import { ReservaTableComponent } from './componentes/reserva-table/reserva-table.component';
 import { ReservaComponent } from './componentes/reserva/reserva.component';
 
 const routes: Routes = [
-  {path: '', component: InicioComponent},
+  { path: '',redirectTo: 'inicio',pathMatch: 'full'},
+  {path: 'inicio', component: InicioComponent},
   {path: 'clientes/card/:id', component: ClienteCardComponent},
   {path: 'clientes/edit/:id', component: ClienteEditComponent},
   {path: 'clientes/new', component: ClienteFormComponent},
@@ -31,6 +33,7 @@ const routes: Routes = [
   {path: 'reserva/servicio', component: ReservaServicioComponent},
   {path: 'reserva/enfermera', component: ReservaEnfermeraComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
   {path: 'map/:id', component: MapComponent},
 ];
 

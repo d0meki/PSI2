@@ -24,6 +24,7 @@ import { ReservaComponent } from './componentes/reserva/reserva.component';
 import { ReservaServicioComponent } from './componentes/reserva-servicio/reserva-servicio.component';
 import { ReservaEnfermeraComponent } from './componentes/reserva-enfermera/reserva-enfermera.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { RegisterComponent } from './componentes/register/register.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { LoginComponent } from './componentes/login/login.component';
     ReservaComponent,
     ReservaServicioComponent,
     ReservaEnfermeraComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
