@@ -16,25 +16,26 @@ import { ReservaEnfermeraComponent } from './componentes/reserva-enfermera/reser
 import { ReservaServicioComponent } from './componentes/reserva-servicio/reserva-servicio.component';
 import { ReservaTableComponent } from './componentes/reserva-table/reserva-table.component';
 import { ReservaComponent } from './componentes/reserva/reserva.component';
+import { VigilanteGuard } from './vigilante.guard';
 
 const routes: Routes = [
   { path: '',redirectTo: 'inicio',pathMatch: 'full'},
   {path: 'inicio', component: InicioComponent},
-  {path: 'clientes/card/:id', component: ClienteCardComponent},
-  {path: 'clientes/edit/:id', component: ClienteEditComponent},
-  {path: 'clientes/new', component: ClienteFormComponent},
-  {path: 'clientes/table', component: ClienteTableComponent},
-  {path: 'enfermeras/card/:id', component: EnfermeraCardComponent},
-  {path: 'enfermeras/edit/:id', component: EnfermeraEditComponent},
-  {path: 'enfermeras/new', component: EnfermeraFormComponent},
-  {path: 'enfermeras/table', component: EnfermeraTableComponent},
-  {path: 'reserva/table', component: ReservaTableComponent},
-  {path: 'reserva', component: ReservaComponent},
-  {path: 'reserva/servicio', component: ReservaServicioComponent},
-  {path: 'reserva/enfermera', component: ReservaEnfermeraComponent},
+  {path: 'clientes/card/:id', component: ClienteCardComponent, canActivate:[VigilanteGuard]},
+  {path: 'clientes/edit/:id', component: ClienteEditComponent, canActivate:[VigilanteGuard]},
+  {path: 'clientes/new', component: ClienteFormComponent, canActivate:[VigilanteGuard]},
+  {path: 'clientes/table', component: ClienteTableComponent, canActivate:[VigilanteGuard]},
+  {path: 'enfermeras/card/:id', component: EnfermeraCardComponent, canActivate:[VigilanteGuard]},
+  {path: 'enfermeras/edit/:id', component: EnfermeraEditComponent, canActivate:[VigilanteGuard]},
+  {path: 'enfermeras/new', component: EnfermeraFormComponent, canActivate:[VigilanteGuard]},
+  {path: 'enfermeras/table', component: EnfermeraTableComponent, canActivate:[VigilanteGuard]},
+  {path: 'reserva/table', component: ReservaTableComponent, canActivate:[VigilanteGuard]},
+  {path: 'reserva', component: ReservaComponent, canActivate:[VigilanteGuard]},
+  {path: 'reserva/servicio', component: ReservaServicioComponent, canActivate:[VigilanteGuard]},
+  {path: 'reserva/enfermera', component: ReservaEnfermeraComponent, canActivate:[VigilanteGuard]},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'map/:id', component: MapComponent},
+  {path: 'map/:id', component: MapComponent, canActivate:[VigilanteGuard]},
 ];
 
 @NgModule({

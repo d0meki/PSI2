@@ -6,6 +6,7 @@ import { DataTablesModule } from "angular-datatables";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CookieService } from 'ngx-cookie-service';
 //////////COMPONENTES
 import { AppComponent } from './app.component';
 import { MapComponent } from './componentes/map/map.component';
@@ -25,6 +26,7 @@ import { ReservaServicioComponent } from './componentes/reserva-servicio/reserva
 import { ReservaEnfermeraComponent } from './componentes/reserva-enfermera/reserva-enfermera.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { RegisterComponent } from './componentes/register/register.component';
+import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { RegisterComponent } from './componentes/register/register.component';
     ReservaServicioComponent,
     ReservaEnfermeraComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,7 @@ import { RegisterComponent } from './componentes/register/register.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

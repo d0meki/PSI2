@@ -4,6 +4,7 @@ import { IEnfermera } from '../interfaces/IEnfermera';
 import { ICliente } from '../interfaces/ICliente';
 import { IServicio } from '../interfaces/Iservicio';
 import { IUser } from '../interfaces/IUser';
+import { IVali } from '../interfaces/IValidatorUser';
 @Injectable({
   providedIn: 'root'
 })
@@ -15,6 +16,9 @@ export class BasededatosService {
   //autentificacion TABLA CUENTA
   getCuentaParam(correo: string,contrasenia: string){
     return this.http.get<IUser>(`${this.URI}/account/${correo}/${contrasenia}`);
+  }
+  validarCuenta(Cuenta: IVali){
+    return this.http.post(`${this.URI}/validar`,Cuenta);
   }
   guardarCuenta(nuevaCuenta: IUser){
     return this.http.post(`${this.URI}/cuenta`,nuevaCuenta);
