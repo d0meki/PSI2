@@ -61,6 +61,9 @@ export class EnfermeraTableComponent implements OnInit {
   irAlForm(){
     this.ruta.navigate(['enfermeras/new'])
   }
+  irAlNav(){
+    this.ruta.navigate(['navegate'])
+  }
 }
 
 

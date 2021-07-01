@@ -3,20 +3,18 @@
         <div class="col-lg-4 offset-lg-4 mt-4">
             <div class="card">
                 <div class="card-header bg-dark text-white d-flex justify-content-between alingn-items-center">
-                    <h3>CLIENTE</h3>
+                    <h3>Enfermera</h3>
+                    <div>
                     <button type="submit" class="btn btn-info" (click)="onEdidt()"><i class="far fa-edit"></i></button>
                     <button type="submit" class="btn btn-danger" (click)="onDelete()"><i class="far fa-trash-alt"></i></button>
-                    <button type="submit" class="btn btn-success" (click)="irAlMapa()"><i class="fas fa-map-marked-alt"></i></button>
+                    </div>
+                    
                 </div>
-                <div class="card-body" *ngFor="let datos of clientes">
+                <div class="card-body" *ngFor="let datos of servicios">
                     <p> <strong>ID:</strong> {{datos.id}} <br>
-                        <strong>ROL:</strong> {{datos.user_id}} <br>
                         <strong>Nombre:</strong> {{datos.nombre}} <br>
-                        <strong>CI:</strong> {{datos.ci_cliente}} <br>
-                        <strong>Telefono:</strong> {{datos.telefono}} <br>
-                        <strong>Direccion:</strong> {{datos.ubicacion}} <br>
-                        <strong>Latitud:</strong> {{datos.latitud}} <br>
-                        <strong>Longitud:</strong> {{datos.longitud}}</p>
+                        <strong>Descripcion</strong> {{datos.descripcio}} <br>
+                        <strong>Precio</strong> {{datos.precio}} <br>
                 </div>
                 <a (click)="volver()" class="btn btn-info btn-block">
                     Atras

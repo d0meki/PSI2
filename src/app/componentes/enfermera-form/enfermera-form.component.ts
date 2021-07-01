@@ -44,8 +44,5 @@ export class EnfermeraFormComponent implements OnInit {
   cancelar(){
     this.ruta.navigate(['enfermeras/table'])
   }
-  verDatos(){
-    console.log(this.registroForm);
-    
-  }
+  
 }

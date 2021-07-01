@@ -1,0 +1,31 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-lg-4 offset-lg-4 mt-4">
+        <div class="card mt-4">
+          <div class="card-header bg-dark text-white d-flex justify-content-between alingn-items-center">
+            REGISTRAR ClIENTE
+          </div>
+          <form [formGroup]='registroForm' (ngSubmit)="nuevoServicio()">
+            <div class="card-body">
+              <div class="form-group">
+                <input type="text" class="form-control" formControlName="nombre" name="" placeholder="Nombre" value="" required> 
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" formControlName="descripcion" name="" placeholder="Descripcion" value="" required> 
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" formControlName="precio"  placeholder="Precio"  value="" required>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-info" [disabled]="registroForm.invalid">REGISTRAR</button>
+                <button type="button" class="btn btn-info float-end" (click)="cancelar()">CANCELAR</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>   
+      
+    

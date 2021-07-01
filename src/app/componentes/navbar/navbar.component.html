@@ -1,41 +1,34 @@
-
-<div class="container">
-  <div class="dropdown">
-    <button type="button" id="dropdownMenuBoton" class="btn btn-success dropdown-toggle" data-toogle="dropdown" aria-haspopup="dropdown" aria-expanded="true">
-      boton desplegar
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Enfermeria v1.0.0</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuBoton">
-      <a href="#" class="dropdown-item">Accion 1</a>
-      <a href="#" class="dropdown-item">Accion 1</a>
-      <a href="#" class="dropdown-item">Accion 1</a>
-    </div>
-  </div>
-</div>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  
-  <div class="container">
-    
-    <div class="container-fluid">
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Información</a>
-          </li>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/nosotros">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contactanos">Contacto</a>
+        </li>
+        <ng-container *ngIf="!isLogin(); else salir">
           <li class="nav-itemFin">
             <a class="nav-link" routerLink = "/login">Login</a>
           </li>
-        </ul>
-      </div>
+        </ng-container>
+        <ng-template #salir>
+          <li class="nav-item">
+            <a class="nav-link" routerLink = "/navegate">Navegador</a>
+          </li>
+          <li class="nav-itemFin">
+            <a class="nav-link" style="cursor: pointer" (click)="logAut()">Logout</a>
+          </li>
+        </ng-template>
+      </ul>
     </div>
-  </div>  
-</nav>  
+  </div>
+</nav>

@@ -61,6 +61,9 @@ export class ClienteTableComponent implements OnInit {
   irAlForm(){
     this.ruta.navigate(['clientes/new'])
   }
+  irAlNav(){
+    this.ruta.navigate(['navegate'])
+  }
 
 }
 

@@ -14,23 +14,19 @@
       <thead>
         <tr>
                   <th scope="col">ID</th>
-                  <th scope="col">User ID</th>
                   <th scope="col">Nombre</th>
-                  <th scope="col">CI</th>
-                  <th scope="col">Telefono</th>
-                  <th scope="col">Direccion</th> 
+                  <th scope="col">Descripcion</th>
+                  <th scope="col">Precio</th> 
                   <th scope="col">Ver</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let cliente of listaClientes">
-          <th scope="row">{{cliente.id}}</th>
-          <th scope="row">{{cliente.user_id}}</th>
-          <td scope="row">{{cliente.nombre}}</td>
-          <td scope="row">{{cliente.ci_cliente}}</td>
-          <td scope="row">{{cliente.telefono}}</td>
-          <td scope="row">{{cliente.ubicacion}}</td>
-          <td><button type="submit" class="btn btn-success btn-lg" (click)="clienteCard(cliente.id)"><i class="fas fa-user"></i></button></td> 
+        <tr *ngFor="let servicio of listaServicios">
+          <th scope="row">{{servicio.id}}</th>
+          <th scope="row">{{servicio.nombre}}</th>
+          <td scope="row">{{servicio.descripcio}}</td>
+          <td scope="row">{{servicio.precio}}</td>
+          <td><button type="submit" class="btn btn-success btn-lg" (click)="servicioCard(servicio.id)"><i class="far fa-eye"></i></button></td> 
         </tr>
       </tbody>
     </table>

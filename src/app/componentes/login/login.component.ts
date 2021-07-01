@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
       .subscribe((res:any)=>{
         console.log(res);
         this.cookieService.set('token_access',res.token,4,'/');
-        this.ruta.navigate(['clientes/table']);
+        this.ruta.navigate(['navegate']);
       },
         error => console.log(error)
       )

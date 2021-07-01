@@ -9,7 +9,6 @@ import { BasededatosService } from '../../services/basededatos.service';
   styleUrls: ['./cliente-edit.component.css']
 })
 export class ClienteEditComponent implements OnInit {
-
   id: any;
   clientes : any;
   editForm: FormGroup;

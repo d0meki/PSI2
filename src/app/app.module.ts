@@ -27,6 +27,12 @@ import { ReservaEnfermeraComponent } from './componentes/reserva-enfermera/reser
 import { LoginComponent } from './componentes/login/login.component';
 import { RegisterComponent } from './componentes/register/register.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
+import { ServicioTableComponent } from './componentes/servicio-table/servicio-table.component';
+import { ServicioCardComponent } from './componentes/servicio-card/servicio-card.component';
+import { ServicioEditComponent } from './componentes/servicio-edit/servicio-edit.component';
+import { ServicioFormComponent } from './componentes/servicio-form/servicio-form.component';
+import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
+import { ContactanosComponent } from './componentes/contactanos/contactanos.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +54,13 @@ import { DashboardComponent } from './componentes/dashboard/dashboard.component'
     ReservaEnfermeraComponent,
     LoginComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
+    ServicioTableComponent,
+    ServicioCardComponent,
+    ServicioEditComponent,
+    ServicioFormComponent,
+    NosotrosComponent,
+    ContactanosComponent
   ],
   imports: [
     BrowserModule,

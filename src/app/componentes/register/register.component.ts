@@ -40,7 +40,7 @@ export class RegisterComponent implements OnInit {
       
   }
   cancelar(){
-    this.ruta.navigate(['login'])
+    this.ruta.navigate(['navegate'])
   }
   verDatos(){
     console.log(this.registroForm);

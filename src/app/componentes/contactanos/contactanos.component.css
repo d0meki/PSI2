@@ -1,0 +1,73 @@
+img{
+    width: 100%;
+    height: 350px;
+}
+#caja{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content:space-between;
+}
+.parrafo{
+
+    margin-top: 20px;
+    height: 180px;
+    width: 450px;
+}
+p{
+    font-size: small;
+    text-align: justify;
+}
+.footer-sample{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.columna{
+    margin-top: 20px;
+    width: 350px;
+    height: 150px;
+}
+.rSociales{
+    display: flex;
+    justify-content: center;
+}
+.titulos{
+    color: white;
+    font-family: serif;
+}
+.pieCont{
+    text-align: center;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.textoq{
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.fab{
+    color: rgb(238, 232, 232);
+    margin: 20px;
+}
+.fas{
+    color: rgb(238, 232, 232);
+    margin: 10px;
+}
+.fab:hover{
+    color: rgb(235, 62, 177);
+}
+.text{
+    color: white;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.container{
+    width: 100%;
+    height: 300px;
+    display: flex;
+   justify-content: right;
+   margin-bottom: 5px;
+}

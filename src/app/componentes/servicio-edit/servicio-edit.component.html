@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+      <div class="col-lg-4 offset-lg-4 mt-4">
+        <div class="card mt-4">
+          <div class="card-header bg-dark text-white d-flex justify-content-between alingn-items-center">
+            EDITAR SERVICIO
+          </div>
+          <form [formGroup]="editForm" (ngSubmit)="editarServicio()" *ngFor="let datos of servicios"> 
+            <div class="card-body">
+                <div class="form-group">
+                    <input type="text" class="form-control is-valid" formControlName="nombre" name="nombre" [(ngModel)]="datos.nombre"placeholder="Nombre Servicio" value="" required> 
+                  </div>
+                  <div class="form-group">
+                      <textarea  type="text" class="form-control is-valid" formControlName="descripcio" name="descripcio" [(ngModel)]="datos.descripcio" placeholder="Descripcion" value="" required></textarea>
+                    <!-- <input type="text" class="form-control is-valid" formControlName="descripcion" name="descripcion" [(ngModel)]="datos.descripcio"placeholder="Descripcion" value="" required>  -->
+                  </div>
+                  <div class="form-group">
+                    <input type="number" class="form-control is-valid" formControlName="precio" name="precio" [(ngModel)]="datos.precio" placeholder="Precion"  value="" required>
+                  <div class="col-12 mt-2">
+                    <button (click)="cancelar()" class="btn btn-info btn-block">Cancelar</button>
+                    <button type="submit" [disabled] = "editForm.invalid" class="btn btn-info btn-block float-end"  >GUARDAR CAMBIOS</button>
+                  </div>
+            </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>   
+      
+    
