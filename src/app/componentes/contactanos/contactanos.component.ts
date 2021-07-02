@@ -19,7 +19,7 @@ export class ContactanosComponent implements OnInit {
         center: { lat: -17.820106, lng: -63.142818 },
         zoom: 17,
       }); */
-      const uluru = { lat: -17.820106, lng: -63.142834};
+      const uluru = { lat: -17.797386, lng: -63.136221};
   // The map, centered at Uluru
   const map = new google.maps.Map(
     document.getElementById("map") as HTMLElement,

@@ -39,7 +39,7 @@ const routes: Routes = [
   {path: 'reserva/table', component: ReservaTableComponent, canActivate:[VigilanteGuard]},
   {path: 'reserva/completado', component: ReservaComponent, canActivate:[VigilanteGuard]},
   {path: 'reserva/servicio', component: ReservaServicioComponent, canActivate:[VigilanteGuard]},
-  {path: 'reserva/enfermera', component: ReservaEnfermeraComponent, canActivate:[VigilanteGuard]},
+  {path: 'reserva/enfermera/:servicio', component: ReservaEnfermeraComponent, canActivate:[VigilanteGuard]},
   {path: 'servicio/form', component: ServicioFormComponent, canActivate:[VigilanteGuard]},
   {path: 'servicio/edit/:id', component: ServicioEditComponent, canActivate:[VigilanteGuard]},
   {path: 'servicio/table', component: ServicioTableComponent, canActivate:[VigilanteGuard]},

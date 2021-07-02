@@ -15,7 +15,7 @@
           <tr *ngFor="let ser of listaDeServicios; let i = index">
             <th scope="row">{{ser.nombre}}</th>
             <td>{{ser.precio}}</td>
-            <td><button type="submit" class="btn btn-info">Seleccionar</button></td>
+            <td><button type="submit" (click)="enviarServicio(ser.id)" class="btn btn-info">Seleccionar</button></td>
           </tr>
         </tbody>
       </table>

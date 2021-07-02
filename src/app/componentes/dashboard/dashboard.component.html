@@ -12,25 +12,29 @@
             <th scope="row">INICIO</th>
             <td><button routerLink ="/inicio"  class="btn btn-info">Seleccionar</button></td>
           </tr>
-          <tr>
+          <tr *ngIf="tienePermiso"><!--   -->
             <th scope="row">TABLA DE ENFERMERAS</th>
             <td><button routerLink ="/enfermeras/table" class="btn btn-info">Seleccionar</button></td>
           </tr>
-          <tr>
+          <tr *ngIf="tienePermiso"><!--  -->
             <th scope="row">TABLA DE CLIENTES</th>
             <td><button routerLink = "/clientes/table"  class="btn btn-info">Seleccionar</button></td>
           </tr>
-          <tr>
+          <tr *ngIf="tienePermiso"><!--   -->
             <th scope="row">TABLA DE SERVICIOS</th>
             <td><button routerLink = "/servicio/table"  class="btn btn-info">Seleccionar</button></td>
           </tr>
-          <tr>
+          <tr *ngIf="tienePermiso || tienePermisoCliente">
             <th scope="row">AGENDAR SERVICIO</th>
             <td><button routerLink ="/reserva/servicio" class="btn btn-info">Seleccionar</button></td>
           </tr>
-          <tr>
+          <tr *ngIf="tienePermiso"><!--  -->
             <th scope="row">CREAR CUENTA DE ACCESO</th>
             <td><button routerLink ="/register" class="btn btn-info">Seleccionar</button></td>
+          </tr>
+          <tr *ngIf="tienePermiso || tienePermisoEnfermera"><!--  -->
+            <th scope="row">VER SI TENGO CITAS PENDIENTES</th>
+            <td><button routerLink ="/reserva/completado" class="btn btn-info">Seleccionar</button></td>
           </tr>
         </tbody>
       </table>

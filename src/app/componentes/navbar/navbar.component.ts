@@ -20,7 +20,8 @@ export class NavbarComponent implements OnInit {
   }
   logAut(){
     this.cookieService.delete('token_access');
-    this.ruta.navigate(['inicio'])
+    this.cookieService.delete('rol');
+    this.ruta.navigate(['/nosotros'])
   }
 
 }

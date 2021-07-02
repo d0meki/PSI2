@@ -12,7 +12,8 @@ import { CookieService } from 'ngx-cookie-service';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
-  icono:any;
+  rol = '';
+  
   constructor(private servicio: BasededatosService, 
             private route:ActivatedRoute,
             private fb: FormBuilder,
@@ -30,15 +31,21 @@ export class LoginComponent implements OnInit {
     this.servicio.validarCuenta(this.loginForm.value)
       .subscribe((res:any)=>{
         console.log(res);
+        this.rol =  res.rol ;
+        if (res.message == 'denegado') {
+          this.ruta.navigate(['inicio']);
+        }else{
         this.cookieService.set('token_access',res.token,4,'/');
+       // this.cookieService.set('rol',res.id,4,'/');
+        this.cookieService.set('rol',this.rol,4,'/');
         this.ruta.navigate(['navegate']);
+        }
+        
       },
         error => console.log(error)
       )
-    console.log();
   }
   
-
           /* if (this.usuarioLog.message == `aprobado`) {
             this.toastr.success('Usuario Valido');
           //  this.ruta.navigate(['/clientes/table']);
